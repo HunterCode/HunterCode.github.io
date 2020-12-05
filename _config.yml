@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 神奇的狮子
+title: 星际冲浪者公会
 subtitle: ''
-description: ''
+description: '知名星际冲浪选手'
 keywords:
-author: lion
+author: 仙人掌-cactus
 language: zh-CN
 timezone: ''
 
@@ -98,11 +98,32 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: cactus
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/HunterCode/HunterCode.github.io
+  repo: 
+    github: https://github.com/HunterCode/HunterCode.github.io
+    coding: https://e.coding.net/xjclzgh/myblog/myblog.git
   branch: master
+
+#douban
+douban:
+  user: 177872237
+  builtin: false
+  book:
+    title: 书籍
+    quote: 更喜欢读实体书
+  movie:
+    title: 电影
+    quote: 喜欢看动画片和经典影片
+  game:
+    title: 游戏
+    quote: 半硬核玩家
+  timeout: 10000
+
+#aplayer
+aplayer:
+  meting: true
