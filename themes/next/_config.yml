@@ -121,8 +121,6 @@ menu:
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
-  books: /books || fa fa-book
-  movies: /movies || fa fa-film
   music: /playlist || fa fa-music
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
