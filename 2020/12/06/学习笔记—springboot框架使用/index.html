@@ -20,20 +20,19 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="七月总结七月是我近一年以来生活、情绪、学习状态最稳定的一个月。 每天上班工作生活作息很规律，早上八点起床，晚上十二点睡觉，上下班的通勤时间可以看20分钟左右的电影或技术视频">
+  <meta name="description" content="常用注解@RestController 和 @Controller 相同点   元注解：@Target({ElementType.TYPE})，作用在类、接口、枚举类上 元注解：@Retention(RetentionPolicy.RUNTIME)，运行期保留 元注解：@Documented，保留文档注解信息   不同点 Controller： 注册为一个控制器类 RestController:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="七月的小尾巴">
-<meta property="og:url" content="http://yoursite.com/2020/07/31/%E4%B8%83%E6%9C%88%E7%9A%84%E5%B0%8F%E5%B0%BE%E5%B7%B4/index.html">
+<meta property="og:title" content="学习笔记—springboot框架使用">
+<meta property="og:url" content="http://yoursite.com/2020/12/06/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94springboot%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="星际冲浪者公会">
-<meta property="og:description" content="七月总结七月是我近一年以来生活、情绪、学习状态最稳定的一个月。 每天上班工作生活作息很规律，早上八点起床，晚上十二点睡觉，上下班的通勤时间可以看20分钟左右的电影或技术视频">
+<meta property="og:description" content="常用注解@RestController 和 @Controller 相同点   元注解：@Target({ElementType.TYPE})，作用在类、接口、枚举类上 元注解：@Retention(RetentionPolicy.RUNTIME)，运行期保留 元注解：@Documented，保留文档注解信息   不同点 Controller： 注册为一个控制器类 RestController:">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-07-31T15:49:43.000Z">
-<meta property="article:modified_time" content="2020-12-05T17:31:08.105Z">
+<meta property="article:published_time" content="2020-12-06T13:04:57.000Z">
+<meta property="article:modified_time" content="2020-12-07T16:23:26.145Z">
 <meta property="article:author" content="仙人掌-cactus">
-<meta property="article:tag" content="生活">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/07/31/%E4%B8%83%E6%9C%88%E7%9A%84%E5%B0%8F%E5%B0%BE%E5%B7%B4/">
+<link rel="canonical" href="http://yoursite.com/2020/12/06/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94springboot%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8/">
 
 
 <script id="page-configurations">
@@ -46,7 +45,7 @@
   };
 </script>
 
-  <title>七月的小尾巴 | 星际冲浪者公会</title>
+  <title>学习笔记—springboot框架使用 | 星际冲浪者公会</title>
   
 
 
@@ -167,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/31/%E4%B8%83%E6%9C%88%E7%9A%84%E5%B0%8F%E5%B0%BE%E5%B7%B4/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/12/06/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94springboot%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -180,7 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          七月的小尾巴
+          学习笔记—springboot框架使用
         </h1>
 
         <div class="post-meta">
@@ -190,24 +189,15 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-07-31 23:49:43" itemprop="dateCreated datePublished" datetime="2020-07-31T23:49:43+08:00">2020-07-31</time>
+              <time title="创建时间：2020-12-06 21:04:57" itemprop="dateCreated datePublished" datetime="2020-12-06T21:04:57+08:00">2020-12-06</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-12-06 01:31:08" itemprop="dateModified" datetime="2020-12-06T01:31:08+08:00">2020-12-06</time>
+                <time title="修改时间：2020-12-08 00:23:26" itemprop="dateModified" datetime="2020-12-08T00:23:26+08:00">2020-12-08</time>
               </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/life/" itemprop="url" rel="index"><span itemprop="name">life</span></a>
-                </span>
-            </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -225,8 +215,8 @@
       </span>
       <span class="post-meta-item-text">评论数：</span>
     
-    <a title="valine" href="/2020/07/31/%E4%B8%83%E6%9C%88%E7%9A%84%E5%B0%8F%E5%B0%BE%E5%B7%B4/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/07/31/%E4%B8%83%E6%9C%88%E7%9A%84%E5%B0%8F%E5%B0%BE%E5%B7%B4/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/12/06/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94springboot%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/12/06/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94springboot%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -236,7 +226,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>512</span>
+              <span>776</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -255,11 +245,44 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="七月总结"><a href="#七月总结" class="headerlink" title="七月总结"></a>七月总结</h1><p>七月是我近一年以来生活、情绪、学习状态最稳定的一个月。</p>
-<p>每天上班工作生活作息很规律，早上八点起床，晚上十二点睡觉，上下班的通勤时间可以看20分钟左右的电影或技术视频</p>
-<a id="more"></a>
-<p>这个月做了很多事情，看了20部电影，读完了2本书，同时也刷完SSM框架视频，B站也上传了2个游戏视频<br>最重要的还是技术方面的进步，七月每天都有在刷leetcode，一个月的时间内刷了近100道题，做题总数达到了130道，也达到了自己月初定下的目标————做题数全站排名5W<br>除了刷题方面，对于以前懵懵懂懂的微服务概念也有了清晰全面地认识<br>而且也成功搭建了属于自己的博客，虽然还有很多功能要做，不过已经很不错啦，哈哈哈哈哈</p>
-<h1 id="八月畅想"><a href="#八月畅想" class="headerlink" title="八月畅想"></a>八月畅想</h1><p>今天看书里谈到剑宗和气宗，剑宗是外功，气宗是内力。我当然是选择气宗，虽然见效很慢就是了<br>八月份我要多刷二叉树的题，每天刷1-2题就好<br>书的话，读完《深入理解计算机系统》<br>技术重心还是放到落地的框架代码中，SpringBoot，SpringCloud这些再过一遍网上的视频，然后跟着做1-2个实际的小项目<br>看看那些技术思想，高端的架构都是怎么在代码中呈现的，如果进行的顺利的话，我还希望再阅读阅读源码，体会一下大牛写的代码质量。八月加油！！！</p>
+        <h1 id="常用注解"><a href="#常用注解" class="headerlink" title="常用注解"></a>常用注解</h1><h2 id="RestController-和-Controller"><a href="#RestController-和-Controller" class="headerlink" title="@RestController 和 @Controller"></a>@RestController 和 @Controller</h2><ul>
+<li>相同点</li>
+</ul>
+<ol>
+<li>元注解：@Target({ElementType.TYPE})，作用在类、接口、枚举类上</li>
+<li>元注解：@Retention(RetentionPolicy.RUNTIME)，运行期保留</li>
+<li>元注解：@Documented，保留文档注解信息</li>
+</ol>
+<ul>
+<li>不同点<ul>
+<li>Controller： 注册为一个控制器类</li>
+<li>RestController:  等于 @Controller + @ResponseBody 注解</li>
+</ul>
+</li>
+</ul>
+<h2 id="ResponseBody"><a href="#ResponseBody" class="headerlink" title="@ResponseBody"></a>@ResponseBody</h2><p>元注解：</p>
+<ol>
+<li>@Target({ElementType.TYPE, ElementType.METHOD})，作用在类和方法上</li>
+<li>@Retention(RetentionPolicy.RUNTIME)，运行期保留</li>
+<li>@Documented，保留文档注解信息</li>
+</ol>
+<p>作用：</p>
+<blockquote>
+<p>将controller的方法返回的对象通过适当的转换器转换为指定的格式之后，写入到response对象的body区，通常用来返回JSON数据或者是XML数据。</p>
+</blockquote>
+<h2 id="RequestMapping"><a href="#RequestMapping" class="headerlink" title="@RequestMapping"></a>@RequestMapping</h2><p>元注解：</p>
+<ol>
+<li>@Target({ElementType.TYPE, ElementType.METHOD})，作用在类和方法上</li>
+<li>@Retention(RetentionPolicy.RUNTIME)，运行期保留</li>
+<li>@Documented，保留文档注解信息</li>
+</ol>
+<p>作用：</p>
+<blockquote>
+<p>在Spring MVC 中使用 @RequestMapping 来映射请求，相当于配置了映射请求</p>
+</blockquote>
+<h2 id="GetMapping"><a href="#GetMapping" class="headerlink" title="@GetMapping"></a>@GetMapping</h2><p>RequestMapping的method=”get”，作用只能在方法上</p>
+<h2 id="PostMapping"><a href="#PostMapping" class="headerlink" title="@PostMapping"></a>@PostMapping</h2><p>RequestMapping的method=“post”，作用只能在方法上</p>
+<h2 id="Autowired"><a href="#Autowired" class="headerlink" title="@Autowired"></a>@Autowired</h2><h2 id="Resource"><a href="#Resource" class="headerlink" title="@Resource"></a>@Resource</h2><h2 id="AliasFor"><a href="#AliasFor" class="headerlink" title="@AliasFor"></a>@AliasFor</h2><p>注解的属性别名，如果注解放在 value 和 path 上，相当于 value 和 path 相同</p>
 
     </div>
 
@@ -268,20 +291,17 @@
     
 
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/%E7%94%9F%E6%B4%BB/" rel="tag"># 生活</a>
-          </div>
 
         
 
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2020/08/01/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%85%A8%E8%BF%87%E7%A8%8B/" rel="next" title="搭建个人博客的全过程">
-      搭建个人博客的全过程 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/12/06/2021%E5%B9%B4%E6%88%91%E8%AF%A5%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0%EF%BC%9F/" rel="prev" title="2021年我该如何学习？">
+      <i class="fa fa-chevron-left"></i> 2021年我该如何学习？
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -341,7 +361,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%83%E6%9C%88%E6%80%BB%E7%BB%93"><span class="nav-number">1.</span> <span class="nav-text">七月总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AB%E6%9C%88%E7%95%85%E6%83%B3"><span class="nav-number">2.</span> <span class="nav-text">八月畅想</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3"><span class="nav-number">1.</span> <span class="nav-text">常用注解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#RestController-%E5%92%8C-Controller"><span class="nav-number">1.1.</span> <span class="nav-text">@RestController 和 @Controller</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ResponseBody"><span class="nav-number">1.2.</span> <span class="nav-text">@ResponseBody</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RequestMapping"><span class="nav-number">1.3.</span> <span class="nav-text">@RequestMapping</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GetMapping"><span class="nav-number">1.4.</span> <span class="nav-text">@GetMapping</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PostMapping"><span class="nav-number">1.5.</span> <span class="nav-text">@PostMapping</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Autowired"><span class="nav-number">1.6.</span> <span class="nav-text">@Autowired</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Resource"><span class="nav-number">1.7.</span> <span class="nav-text">@Resource</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AliasFor"><span class="nav-number">1.8.</span> <span class="nav-text">@AliasFor</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

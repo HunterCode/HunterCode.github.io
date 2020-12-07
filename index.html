@@ -163,6 +163,325 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/12/06/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94springboot%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="仙人掌-cactus">
+      <meta itemprop="description" content="知名星际冲浪选手">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="星际冲浪者公会">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/12/06/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94springboot%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">学习笔记—springboot框架使用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-06 21:04:57" itemprop="dateCreated datePublished" datetime="2020-12-06T21:04:57+08:00">2020-12-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-08 00:23:26" itemprop="dateModified" datetime="2020-12-08T00:23:26+08:00">2020-12-08</time>
+              </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">评论数：</span>
+    
+    <a title="valine" href="/2020/12/06/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94springboot%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/12/06/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E2%80%94springboot%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>776</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="常用注解"><a href="#常用注解" class="headerlink" title="常用注解"></a>常用注解</h1><h2 id="RestController-和-Controller"><a href="#RestController-和-Controller" class="headerlink" title="@RestController 和 @Controller"></a>@RestController 和 @Controller</h2><ul>
+<li>相同点</li>
+</ul>
+<ol>
+<li>元注解：@Target({ElementType.TYPE})，作用在类、接口、枚举类上</li>
+<li>元注解：@Retention(RetentionPolicy.RUNTIME)，运行期保留</li>
+<li>元注解：@Documented，保留文档注解信息</li>
+</ol>
+<ul>
+<li>不同点<ul>
+<li>Controller： 注册为一个控制器类</li>
+<li>RestController:  等于 @Controller + @ResponseBody 注解</li>
+</ul>
+</li>
+</ul>
+<h2 id="ResponseBody"><a href="#ResponseBody" class="headerlink" title="@ResponseBody"></a>@ResponseBody</h2><p>元注解：</p>
+<ol>
+<li>@Target({ElementType.TYPE, ElementType.METHOD})，作用在类和方法上</li>
+<li>@Retention(RetentionPolicy.RUNTIME)，运行期保留</li>
+<li>@Documented，保留文档注解信息</li>
+</ol>
+<p>作用：</p>
+<blockquote>
+<p>将controller的方法返回的对象通过适当的转换器转换为指定的格式之后，写入到response对象的body区，通常用来返回JSON数据或者是XML数据。</p>
+</blockquote>
+<h2 id="RequestMapping"><a href="#RequestMapping" class="headerlink" title="@RequestMapping"></a>@RequestMapping</h2><p>元注解：</p>
+<ol>
+<li>@Target({ElementType.TYPE, ElementType.METHOD})，作用在类和方法上</li>
+<li>@Retention(RetentionPolicy.RUNTIME)，运行期保留</li>
+<li>@Documented，保留文档注解信息</li>
+</ol>
+<p>作用：</p>
+<blockquote>
+<p>在Spring MVC 中使用 @RequestMapping 来映射请求，相当于配置了映射请求</p>
+</blockquote>
+<h2 id="GetMapping"><a href="#GetMapping" class="headerlink" title="@GetMapping"></a>@GetMapping</h2><p>RequestMapping的method=”get”，作用只能在方法上</p>
+<h2 id="PostMapping"><a href="#PostMapping" class="headerlink" title="@PostMapping"></a>@PostMapping</h2><p>RequestMapping的method=“post”，作用只能在方法上</p>
+<h2 id="Autowired"><a href="#Autowired" class="headerlink" title="@Autowired"></a>@Autowired</h2><h2 id="Resource"><a href="#Resource" class="headerlink" title="@Resource"></a>@Resource</h2><h2 id="AliasFor"><a href="#AliasFor" class="headerlink" title="@AliasFor"></a>@AliasFor</h2><p>注解的属性别名，如果注解放在 value 和 path 上，相当于 value 和 path 相同</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/12/06/2021%E5%B9%B4%E6%88%91%E8%AF%A5%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0%EF%BC%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="仙人掌-cactus">
+      <meta itemprop="description" content="知名星际冲浪选手">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="星际冲浪者公会">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/12/06/2021%E5%B9%B4%E6%88%91%E8%AF%A5%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0%EF%BC%9F/" class="post-title-link" itemprop="url">2021年我该如何学习？</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-12-06 20:08:51 / 修改时间：20:24:39" itemprop="dateCreated datePublished" datetime="2020-12-06T20:08:51+08:00">2020-12-06</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">评论数：</span>
+    
+    <a title="valine" href="/2020/12/06/2021%E5%B9%B4%E6%88%91%E8%AF%A5%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0%EF%BC%9F/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/12/06/2021%E5%B9%B4%E6%88%91%E8%AF%A5%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0%EF%BC%9F/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>542</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>2021年我该如何进行学习？这是我对自己技术的一个迷茫点。<br>首先，我给自己列个几个不同的方向</p>
+<ol>
+<li>继续钻研算法——刷爆leetcode，参加各大OJ比赛，研究算法，数学</li>
+<li>学习框架使用——其实自己对于框架的使用一直都不是很熟练，因为没有特别花心思在上面研究，只会一些基础的理论知识，实际上对于特别原理性的东西还是一知半解，包括spring的注解，aop的使用场景等。使用spring到底可以给我自己带来什么样的好处？没有spring的话会很麻烦嘛？思来想去，感觉ssm的作用就那么一点，虽然涵盖了工程上的大部分适用场景，包括生成对象，路由转发，查库啥的，然而我不是特别理解。这部分就是多做几个项目去熟悉。</li>
+<li>学习系统设计、学习中间件，在架构的角度看系统，看系统的设计合理性，如何设计分布式系统等等。</li>
+<li>学习类设计，让代码更加厉害。</li>
+<li>学习底层知识，操作系统，计算机网络等等这些内功心法</li>
+<li>学习并发编程，网络编程，这属于搞java核心编程了，也是让自己代码变的更厉害，让自己可以看懂更高级的代码</li>
+</ol>
+<p>简单从作用和时间重要性和学习重要性<br>| 学习方向 | 学习成本 | 学习动力 | 重要程度 | 紧急度 |<br>| 算法     |  3      | 5       | 2        | 1    |<br>| 核心编程 |  2      | 3        | 4         | 4    |<br>| 架构设计 |  4      | 2        | 3        | 2    |<br>| 底层知识 |  5       | 1        | 5       | 3    |<br>| 框架使用 |  1      | 4         | 1        |   5    |</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/12/06/2020%E5%B9%B47%E6%9C%88%E8%87%B32020%E5%B9%B412%E6%9C%88%E5%88%B7%E9%A2%98%E5%B0%8F%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="仙人掌-cactus">
+      <meta itemprop="description" content="知名星际冲浪选手">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="星际冲浪者公会">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/12/06/2020%E5%B9%B47%E6%9C%88%E8%87%B32020%E5%B9%B412%E6%9C%88%E5%88%B7%E9%A2%98%E5%B0%8F%E7%BB%93/" class="post-title-link" itemprop="url">2020年7月至2020年12月刷题小结</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-06 19:51:44" itemprop="dateCreated datePublished" datetime="2020-12-06T19:51:44+08:00">2020-12-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-08 00:22:06" itemprop="dateModified" datetime="2020-12-08T00:22:06+08:00">2020-12-08</time>
+              </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">评论数：</span>
+    
+    <a title="valine" href="/2020/12/06/2020%E5%B9%B47%E6%9C%88%E8%87%B32020%E5%B9%B412%E6%9C%88%E5%88%B7%E9%A2%98%E5%B0%8F%E7%BB%93/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/12/06/2020%E5%B9%B47%E6%9C%88%E8%87%B32020%E5%B9%B412%E6%9C%88%E5%88%B7%E9%A2%98%E5%B0%8F%E7%BB%93/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>123</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>刷题刷了有半年，有什么收获呢？<br>从数据上看，leetcode做题数接近450。题型上学会了简单的双指针，动态规划，单调栈，树的各种做法，深搜，广搜，并查集，线段树，树状数组，排序算法，冒泡，插入，归并，快排，希尔，计数，基数，桶排，堆排，选择<br>待更新</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/12/06/hexo%E6%9B%B4%E6%8D%A2%E7%94%B5%E8%84%91%E9%83%A8%E7%BD%B2%E7%9A%84%E8%BF%87%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -642,7 +961,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -704,13 +1023,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">5k</span>
+    <span title="站点总字数">6k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">4 分钟</span>
+    <span title="站点阅读时长">6 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
